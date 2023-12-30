@@ -1,4 +1,4 @@
-import { PCECroppedLogo, ae} from "../assets/images";
+import { PCECroppedLogo, ae, TQI} from "../assets/images";
 import {
     car,
     python,
@@ -97,10 +97,10 @@ export const skills = [
     }
 ];
 
-export const experiences = [
+export const education = [
     {
         title: "B.Tech - Computer Engineering",
-        company_name: "Pillai College of Engineering",
+        school_name: "Pillai College of Engineering",
         icon: PCECroppedLogo,
         iconBg: "#accbe1",
         date: "Aug 2016 - May 2023",
@@ -110,7 +110,7 @@ export const experiences = [
     },
     {
         title: "HSC - 12th ",
-        company_name: "Atomic Energy Junior College",
+        school_name: "Atomic Energy Junior College",
         icon: ae,
         iconBg: "#fbc3bc",
         date: "Aug 2015 - May 2016",
@@ -120,7 +120,7 @@ export const experiences = [
     },
     {
         title: "SSC - 10th",
-        company_name: "Atomic Energy Central School",
+        school_name: "Atomic Energy Central School",
         icon: ae,
         iconBg: "#b7e4c7",
         date: "Aug 2013 - May 2014",
@@ -130,6 +130,19 @@ export const experiences = [
     },
     
 ];
+
+export const experiences = [
+    {
+        title: "Web Development Intern",
+        company_name: "The Qwerty Ink",
+        icon: TQI,
+        iconBg: "#accbe1",
+        date: "Dec 2023 - Present",
+        points: [
+            "Developed and maintained sitemaps, wireframes and the websites according to client specifiactions",
+        ],
+    }
+]
 
 export const socialLinks = [
     {

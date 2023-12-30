@@ -4,7 +4,7 @@ import {
 } from "react-vertical-timeline-component";
 
 import { CTA } from "../components";
-import { experiences, skills } from "../constants";
+import { education, experiences, skills } from "../constants";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -15,7 +15,7 @@ const About = () => {
         Hello, I'm{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
           {" "}
-          Abhinav
+          Abhinav.
         </span>{" "}
         👋
       </h1>
@@ -51,6 +51,65 @@ const About = () => {
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
             Here's a rundown of my education history - 
+          </p>
+        </div>
+
+        <div className="mt-12 flex">
+          <VerticalTimeline>
+            {education.map((education, index) => (
+              <VerticalTimelineElement
+                key={education.school_name}
+                date={education.date}
+                iconStyle={{ background: education.iconBg }}
+                icon={
+                  <div className="flex justify-center items-center w-full h-full">
+                    <img
+                      src={education.icon}
+                      alt={education.school_name}
+                      className="w-[60%] h-[60%] object-contain"
+                    />
+                  </div>
+                }
+                contentStyle={{
+                  borderBottom: "8px",
+                  borderStyle: "solid",
+                  borderBottomColor: education.iconBg,
+                  boxShadow: "none",
+                }}
+              >
+                <div>
+                  <h3 className="text-black text-xl font-poppins font-semibold">
+                    {education.title}
+                  </h3>
+                  <p
+                    className="text-black-500 font-medium text-base"
+                    style={{ margin: 0 }}
+                  >
+                    {education.school_name}
+                  </p>
+                </div>
+
+                <ul className="my-5 list-disc ml-5 space-y-2">
+                  {education.points.map((point, index) => (
+                    <li
+                      key={`education-point-${index}`}
+                      className="text-black-500/50 font-normal pl-1 text-sm"
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+        </div>
+      </div>
+
+      <div className="py-16">
+        <h3 className="subhead-text">Experiences</h3>
+        <div className="mt-5 flex flex-col gap-3 text-slate-500">
+          <p>
+            Now let's talk about my Work experiences - 
           </p>
         </div>
 

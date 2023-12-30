@@ -6,6 +6,7 @@ import tesla from './tesla.png'
 import logo from './logo.svg'
 import PCECroppedLogo from './PCECroppedLogo.png'
 import ae from './ae.png'
+import TQI from './TQI.png'
 
 export {
     hero,
@@ -15,5 +16,6 @@ export {
     tesla,
     logo,
     PCECroppedLogo,
-    ae
+    ae,
+    TQI
 }
